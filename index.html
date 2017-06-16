@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> my introduce </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        body,html{
+            width: 100%;
+            height: 100%;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-wrapper > .swiper-slide:nth-child(1){
+            background: #83aaa0;
+        }
+        .swiper-wrapper > .swiper-slide:nth-child(2){
+            background: #0f8c81;
+        }
+        .swiper-wrapper > .swiper-slide:nth-child(3){
+            background: #4c5d8d;
+        }
+        .swiper-wrapper > .swiper-slide:nth-child(4){
+            background: #915a4b;
+        }
+        .swiper-wrapper > .swiper-slide:nth-child(5){
+            background: #49829d;
+        }
+        .swiper-wrapper > .swiper-slide:nth-child(6){
+            background: #9e956e;
+        }
+
+        /*github*/
+        .github,.github img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .github{
+            position: fixed;
+            left: 100px;
+            top: 15px;
+            z-index: 1000;
+        }
+
+
+        /*page1*/
+        .page1{
+            color: #ffffff;
+        }
+        .page1 .sec1{
+            display: table;
+            height: 250px;
+            width: 100%;
+            padding-top: 50px;
+            /*background: #f0f0f0;*/
+        }
+        .page1 .sec1 .wrapper{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .page1 .sec1 .wrapper img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .page1 .sec2{
+            width: 80%;
+            height: 80px;
+            margin: 0 auto;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: center;
+            line-height: 80px;
+            font-size: 24px;
+        }
+        .page1 .sec3{
+            width: 100%;
+            height: 250px;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .page2{
+            text-align: center;
+            color: #ffffff;
+        }
+        .page2 > .p2-sec1{
+            width: 100%;
+            height: 250px;
+            padding-top: 50px;
+        }
+        .p2-sec1 > ul{
+            display: inline-block;
+            padding: 15px;
+            left: 50%;
+        }
+        .p2-sec1 h4{
+            font-size: 24px;
+        }
+        .p2-sec1 > ul > li{
+            float: left;
+            width: 170px;
+            height: 165px;
+            text-align: center;
+        }
+        .page2  .pic{
+            text-align: center;
+            vertical-align: middle;
+            width: 85px;
+            height: 85px;
+            margin: 10px auto;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .3);
+            margin-bottom: 15px;
+        }
+        .page2  .pic img{
+            margin-top: 22px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .p2-sec2 ul{
+            padding-top: 50px;
+        }
+        .p2-sec2 li{
+            padding: 10px 0;
+        }
+        .page3{
+            color: #ffffff;
+        }
+        .page3 h4{
+            padding-top: 45px;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .page3 .p3-skills{
+            width: 100%;
+            padding: 50px;
+            text-align: center;
+        }
+        .page3 .p3-skills .left{
+            display: inline-block;
+            width: 40%;
+            height: 300px;
+            border: 1px solid #c0d0d0;
+            position: relative;
+        }
+        .page3 .p3-skills .left:before{
+            content: "";
+            display: block;
+            width: 150px;
+            height: 150px;
+            border: 1px dotted #c0d0d0;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -75px;
+            margin-top: -75px;
+        }
+        .page3 .p3-skills .left:after{
+            content: "";
+            display: block;
+            width: 280px;
+            height: 280px;
+            border: 1px dotted #c0d0d0;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -140px;
+            margin-top: -140px;
+        }
+        .page3 .p3-skills .right{
+            display: inline-block;
+            width: 40%;
+            height: 250px;
+            text-align: center;
+            border: 1px solid #c0d0d0;
+        }
+        .skills{
+
+        }
+        .skills li{
+            position: relative;
+        }
+        .skills li a{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .3);
+            text-align: center;
+        }
+        .skills .skills-inner a{
+            width: 50px;
+            height: 50px;
+            margin-left: -25px;
+            margin-top: -25px;
+            line-height: 50px;
+        }
+        .skills .skills-outer a{
+            width: 65px;
+            height: 65px;
+            margin-left: -32px;
+            margin-top: -32px;
+            line-height: 65px;
+        }
+        .skills .skills-inner{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -75px;
+            margin-left: -75px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 1px dotted #c0d0d0;
+        }
+        .skills .skills-outer{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -140px;
+            margin-left: -140px;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 1px dotted #c0d0d0;
+        }
+        .skills .skills-inner a:nth-child(1){
+            transform: translateY(75px);
+            background: rgba(20, 55, 5, .3);
+
+        }
+        .skills .skills-inner a:nth-child(2){
+            transform: rotate(70deg) translateY(75px) rotate(-70deg);
+            background: rgba(20, 55, 55, .3);
+        }
+        .skills .skills-inner a:nth-child(3){
+            transform: rotate(140deg) translateY(75px) rotate(-140deg);
+            background: rgba(193,131,106,0.8);
+        }
+        .skills .skills-inner a:nth-child(4){
+            transform: rotate(210deg) translateY(75px) rotate(-210deg);
+            background: rgba(171,209,220,0.8);
+        }
+        .skills .skills-inner a:nth-child(5){
+            transform: rotate(280deg) translateY(75px) rotate(-280deg);
+            background: rgba(207,184,178,0.8);
+        }
+        .skills .skills-outer a:nth-child(1){
+            transform:translateY(140px);
+        }
+        .skills .skills-outer a:nth-child(2){
+            transform: rotate(40deg) translateY(140px) rotate(-40deg);
+            background: rgba(147,147,189,0.8);
+        }
+        .skills .skills-outer a:nth-child(3){
+            transform: rotate(80deg) translateY(140px) rotate(-80deg);
+            background: rgba(121,100,102,0.8);
+        }
+        .skills .skills-outer a:nth-child(4){
+            transform: rotate(120deg) translateY(140px) rotate(-120deg);
+            background: rgba(49, 65, 82, 0.8);
+        }
+        .skills .skills-outer a:nth-child(5){
+            transform: rotate(160deg) translateY(140px) rotate(-160deg);
+            background: rgba(76,157,160,0.8);
+        }
+        .skills .skills-outer a:nth-child(6){
+            transform: rotate(200deg) translateY(140px) rotate(-200deg);
+            background: rgba(66,66,66,0.8);
+        }
+        .skills .skills-outer a:nth-child(7){
+            transform: rotate(240deg) translateY(140px) rotate(-240deg);
+            background: rgba(193,131,106,0.8);
+        }
+        .skills .skills-outer a:nth-child(8){
+            transform: rotate(280deg) translateY(140px) rotate(-280deg);
+            background: rgba(117,148,179,0.8);
+        }
+        .skills .skills-outer a:nth-child(9){
+            transform: rotate(320deg) translateY(140px) rotate(-320deg);
+            background: rgba(238,215,163,0.8);
+        }
+
+
+        .page4 h4{
+            width: 100%;
+            height: 50px;
+            padding-top: 40px;
+            text-align: center;
+            line-height: 50px;
+            color: #f0f0f0;
+            font-size: 24px;
+        }
+        .swiper-container2{
+            width: 60%;
+            height: 60%;
+            margin: 0 auto;
+            overflow: hidden;
+            /*padding-bottom: 50px;*/
+        }
+        .swiper-container2 .swiper-wrapper{}
+        .swiper-container2 .swiper-wrapper .swiper-slide{
+            background: beige;
+        }
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="github">
+            <a href="#"><img src="img/logo.jpg" alt=""></a>
+        </div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide page1">
+                <div class="sec1">
+                    <div class="wrapper">
+                        <img src="img/logo.jpg" alt="">
+                    </div>
+                </div>
+                <div class="sec2">生活是一种绵延不绝的渴望，渴望不断上升，变得更伟大而高贵。</div>
+                <div class="sec3">
+                    <p>我叫陆贵成</p>
+                    <p>一名前端开发工程师</p>
+                    <p>邮箱: wooorks@163.com</p>
+                </div>
+            </div>
+            <div class="swiper-slide page2">
+                <div class="p2-sec1">
+                    <h4>关于我</h4>
+                    <ul>
+                        <li>
+                            <div class="pic">
+                                <img src="img/photo.jpg" alt="">
+                            </div>
+                            <p>年龄/23</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/photo.jpg" alt="">
+                            </div>
+                            <p>学历/本科</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/photo.jpg" alt="">
+                            </div>
+                            <p>坐标/深圳</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/photo.jpg" alt="">
+                            </div>
+                            <p>状态/离职</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p2-sec2">
+                    <ul>
+                        <li>三年互联网经验,两年半全职前端开发经验</li>
+                        <li>熟悉MV*开发,深谙自动化,模块化开发之道</li>
+                        <li>高效的自学能力,具备独立分析解决问题能力</li>
+                        <li>强烈的自我驱动力,代码强迫症患者</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="swiper-slide page3">
+                <h4>技能栈</h4>
+                <div class="p3-skills">
+                    <div class="left">
+                        <ul class="skills">
+                            <li class="skills-inner" id="skills_inner">
+                                <a>html</a>
+                                <a>css</a>
+                                <a>js</a>
+                                <a>jQ</a>
+                                <a>btp</a>
+                            </li>
+                            <li class="skills-outer" id="skills_outer">
+                                <a>ng</a>
+                                <a>vue</a>
+                                <a>gulp</a>
+                                <a>git</a>
+                                <a>wpk</a>
+                                <a>less</a>
+                                <a>suss</a>
+                                <a>ps</a>
+                                <a>php</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <p>熟练使用angularJs1.x及各种类库的指令封装</p>
+                        <p>常驻PC/APP/微信三平台前端研发</p>
+                        <p>擅长组件/插件开发，能脱离库书写JS代码</p>
+                        <p> 编码常思其健壮性，扩展性，维护性</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide page4">
+                <h4>经历</h4>
+                <div class="swiper-container2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">1</div>
+                        <div class="swiper-slide">2</div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="swiper-slide page5">Slide 5</div>
+            <div class="swiper-slide page6">Slide 6</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="scripts/swiper.jquery.js"></script>
+    <script src="scripts/swiper.animate1.0.2.min.js"></script>
+    <script src="scripts/swiper.min.js"></script>
+    <script src="scripts/index.js"></script>
+
+    <script>
+        (function () {
+            var skills_inner = document.querySelectorAll("#skills_inner > a");
+            var skills_outer = document.querySelectorAll("#skills_outer > a");
+
+            var i = 0;
+            var j = 0;
+            var a = 0;
+            setInterval(function () {
+                a+=0.1;
+                skills_inner[i].style.transform = 'rotate('+ (i*70+a) +'deg) translateY(75px) rotate(-'+ (i*70+a) +'deg)';
+                skills_outer[j].style.transform = 'rotate(-'+ (j*40+a) +'deg) translateY(140px) rotate('+ (j*40+a) +'deg)';
+                j++;
+                j%=9;
+                i++;
+                i%=5;
+            },13);
+
+        })()
+    </script>
+</body>
+</html>
