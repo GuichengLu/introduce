@@ -4,320 +4,132 @@
     <meta charset="utf-8">
     <title> my introduce </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/index.css">
     <style>
-        body,html{
-            width: 100%;
-            height: 100%;
-        }
-        ul{
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .swiper-wrapper > .swiper-slide:nth-child(1){
-            background: #83aaa0;
-        }
-        .swiper-wrapper > .swiper-slide:nth-child(2){
-            background: #0f8c81;
-        }
-        .swiper-wrapper > .swiper-slide:nth-child(3){
-            background: #4c5d8d;
-        }
-        .swiper-wrapper > .swiper-slide:nth-child(4){
-            background: #915a4b;
-        }
-        .swiper-wrapper > .swiper-slide:nth-child(5){
-            background: #49829d;
-        }
-        .swiper-wrapper > .swiper-slide:nth-child(6){
-            background: #9e956e;
-        }
+        @media (max-width: 768px) {
+            .page1 div.sec2{
+                font-size: 1.8rem;
+            }
+            .page1 div.sec3{
+                font-size: 1.6rem;
+                padding-top: 1rem;
+            }
+            .p2-sec1 > .row{
+                padding: 2rem;
+            }
+            .p2-sec1 > .row > li{
+                height: 11.5rem;
+            }
+            .page2{
+                font-size: 1.6rem;
+            }
+            .page2 div.pic{
+                height: 6rem;
+                width: 6rem;
+            }
+            div.p2-sec1 h4{
+                margin-bottom: 1rem;
+            }
+            .page2 div.pic img{
+                margin-top: 1rem;
+                width: 4rem;
+                height: 4rem;
+            }
+            .page3 .p3-skills div.left{
+                height: 25rem;
+            }
+            .page3 .p3-skills div.right{
+                font-size: 1.6rem;
+                padding-top: 0;
+            }
+            #exp-content div.exp-one,#exp-content div.exp-two{
+                width: 80%;
+                height: 70%;
+            }
+            #exp-content .pic,#exp-content .pic{
+                display: none;
+            }
+            #exp-content div.text, #exp-content div.text{
+                padding: 5rem;
+                font-size: 1.6rem;
+            }
+            #exp-content div.text h4, #exp-content div.text h4{
+                font-size: 1.8rem;
+            }
+            div#tabs {
+                bottom: 2%;
+            }
 
-        /*github*/
-        .github,.github img{
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
-        .github{
-            position: fixed;
-            left: 100px;
-            top: 15px;
-            z-index: 1000;
-        }
+            /*demo on mobile*/
+            .page5 div.items{
+                width: 24rem;
+                height: 36rem;
+                transform-style: preserve-3d;
+                transform: rotateX(5deg) translateX(-50%) translateY(-50%);
+            }
+            .page5 div.wrapper > div{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 100%;
+                height: 100%;
+                transform: translateX(-50%) translateY(-50%);
+                margin-left: -12rem;
+                margin-top: -18rem;
+                background: rgba(255, 255, 255, 0.97);
+                border-radius: 0;
+                font-size: 1.5rem;
+                border-right: 1px solid #f0f0f0;
+            }
+            .page5 div.wrapper > div:hover{
+                box-shadow: none;
+            }
+            .page5 div.wrapper > div:nth-child(1){
+                transform: rotateY(0deg) translateZ(12rem);
+            }
+            .page5 div.wrapper > div:nth-child(2){
+                transform: rotateY(90deg) translateZ(12rem);
+            }
+            .page5 div.wrapper > div:nth-child(3){
+                transform: rotateY(180deg) translateZ(12rem);
+            }
+            .page5 div.wrapper > div:nth-child(4){
+                transform: rotateY(270deg) translateZ(12rem);
+            }
+            .page5 .tabs a{
+                display: inline-block;
+                border-radius: 50%;
+                border: 1px solid #FFF;
+                height: 30px;
+                width: 30px;
+                position: relative;
+                background: url(img/arrow.svg) center 35% no-repeat;
+                background-size: 70%;
+                text-indent: -999em;
+            }
+            .page5 .tabs a:nth-child(1){
+                transform: rotate(-90deg);
+                left: 6rem;
+                top: 44rem;
+            }
+            .page5 .tabs a:nth-child(2){
+                transform: rotate(90deg);
+                right: -20rem;
+                top: 44rem;
+            }
+            .more-demo{
+                position: absolute;
+                left: 50%;
+                bottom: 2rem;
+                transform: translateX(-50%);
+            }
+            .more-demo a{
+                color: #fff;
+            }
 
-
-        /*page1*/
-        .page1{
-            color: #ffffff;
-        }
-        .page1 .sec1{
-            display: table;
-            height: 250px;
-            width: 100%;
-            padding-top: 50px;
-            /*background: #f0f0f0;*/
-        }
-        .page1 .sec1 .wrapper{
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            display: table-cell;
-            vertical-align: middle;
-            text-align: center;
-        }
-        .page1 .sec1 .wrapper img{
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-        }
-        .page1 .sec2{
-            width: 80%;
-            height: 80px;
-            margin: 0 auto;
-            border-bottom: 1px solid #e0e0e0;
-            text-align: center;
-            line-height: 80px;
-            font-size: 24px;
-        }
-        .page1 .sec3{
-            width: 100%;
-            height: 250px;
-            text-align: center;
-            padding-top: 50px;
-        }
-
-        .page2{
-            text-align: center;
-            color: #ffffff;
-        }
-        .page2 > .p2-sec1{
-            width: 100%;
-            height: 250px;
-            padding-top: 50px;
-        }
-        .p2-sec1 > ul{
-            display: inline-block;
-            padding: 15px;
-            left: 50%;
-        }
-        .p2-sec1 h4{
-            font-size: 24px;
-        }
-        .p2-sec1 > ul > li{
-            float: left;
-            width: 170px;
-            height: 165px;
-            text-align: center;
-        }
-        .page2  .pic{
-            text-align: center;
-            vertical-align: middle;
-            width: 85px;
-            height: 85px;
-            margin: 10px auto;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, .3);
-            margin-bottom: 15px;
-        }
-        .page2  .pic img{
-            margin-top: 22px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
-        .p2-sec2 ul{
-            padding-top: 50px;
-        }
-        .p2-sec2 li{
-            padding: 10px 0;
-        }
-        .page3{
-            color: #ffffff;
-        }
-        .page3 h4{
-            padding-top: 45px;
-            width: 100%;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            font-size: 24px;
-        }
-        .page3 .p3-skills{
-            width: 100%;
-            padding: 50px;
-            text-align: center;
-        }
-        .page3 .p3-skills .left{
-            display: inline-block;
-            width: 40%;
-            height: 300px;
-            border: 1px solid #c0d0d0;
-            position: relative;
-        }
-        .page3 .p3-skills .left:before{
-            content: "";
-            display: block;
-            width: 150px;
-            height: 150px;
-            border: 1px dotted #c0d0d0;
-            border-radius: 50%;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-left: -75px;
-            margin-top: -75px;
-        }
-        .page3 .p3-skills .left:after{
-            content: "";
-            display: block;
-            width: 280px;
-            height: 280px;
-            border: 1px dotted #c0d0d0;
-            border-radius: 50%;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-left: -140px;
-            margin-top: -140px;
-        }
-        .page3 .p3-skills .right{
-            display: inline-block;
-            width: 40%;
-            height: 250px;
-            text-align: center;
-            border: 1px solid #c0d0d0;
-        }
-        .skills{
-
-        }
-        .skills li{
-            position: relative;
-        }
-        .skills li a{
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, .3);
-            text-align: center;
-        }
-        .skills .skills-inner a{
-            width: 50px;
-            height: 50px;
-            margin-left: -25px;
-            margin-top: -25px;
-            line-height: 50px;
-        }
-        .skills .skills-outer a{
-            width: 65px;
-            height: 65px;
-            margin-left: -32px;
-            margin-top: -32px;
-            line-height: 65px;
-        }
-        .skills .skills-inner{
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-top: -75px;
-            margin-left: -75px;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 1px dotted #c0d0d0;
-        }
-        .skills .skills-outer{
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-top: -140px;
-            margin-left: -140px;
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            border: 1px dotted #c0d0d0;
-        }
-        .skills .skills-inner a:nth-child(1){
-            transform: translateY(75px);
-            background: rgba(20, 55, 5, .3);
-
-        }
-        .skills .skills-inner a:nth-child(2){
-            transform: rotate(70deg) translateY(75px) rotate(-70deg);
-            background: rgba(20, 55, 55, .3);
-        }
-        .skills .skills-inner a:nth-child(3){
-            transform: rotate(140deg) translateY(75px) rotate(-140deg);
-            background: rgba(193,131,106,0.8);
-        }
-        .skills .skills-inner a:nth-child(4){
-            transform: rotate(210deg) translateY(75px) rotate(-210deg);
-            background: rgba(171,209,220,0.8);
-        }
-        .skills .skills-inner a:nth-child(5){
-            transform: rotate(280deg) translateY(75px) rotate(-280deg);
-            background: rgba(207,184,178,0.8);
-        }
-        .skills .skills-outer a:nth-child(1){
-            transform:translateY(140px);
-        }
-        .skills .skills-outer a:nth-child(2){
-            transform: rotate(40deg) translateY(140px) rotate(-40deg);
-            background: rgba(147,147,189,0.8);
-        }
-        .skills .skills-outer a:nth-child(3){
-            transform: rotate(80deg) translateY(140px) rotate(-80deg);
-            background: rgba(121,100,102,0.8);
-        }
-        .skills .skills-outer a:nth-child(4){
-            transform: rotate(120deg) translateY(140px) rotate(-120deg);
-            background: rgba(49, 65, 82, 0.8);
-        }
-        .skills .skills-outer a:nth-child(5){
-            transform: rotate(160deg) translateY(140px) rotate(-160deg);
-            background: rgba(76,157,160,0.8);
-        }
-        .skills .skills-outer a:nth-child(6){
-            transform: rotate(200deg) translateY(140px) rotate(-200deg);
-            background: rgba(66,66,66,0.8);
-        }
-        .skills .skills-outer a:nth-child(7){
-            transform: rotate(240deg) translateY(140px) rotate(-240deg);
-            background: rgba(193,131,106,0.8);
-        }
-        .skills .skills-outer a:nth-child(8){
-            transform: rotate(280deg) translateY(140px) rotate(-280deg);
-            background: rgba(117,148,179,0.8);
-        }
-        .skills .skills-outer a:nth-child(9){
-            transform: rotate(320deg) translateY(140px) rotate(-320deg);
-            background: rgba(238,215,163,0.8);
-        }
-
-
-        .page4 h4{
-            width: 100%;
-            height: 50px;
-            padding-top: 40px;
-            text-align: center;
-            line-height: 50px;
-            color: #f0f0f0;
-            font-size: 24px;
-        }
-        .swiper-container2{
-            width: 60%;
-            height: 60%;
-            margin: 0 auto;
-            overflow: hidden;
-            /*padding-bottom: 50px;*/
-        }
-        .swiper-container2 .swiper-wrapper{}
-        .swiper-container2 .swiper-wrapper .swiper-slide{
-            background: beige;
         }
     </style>
 </head>
@@ -325,17 +137,17 @@
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="github">
-            <a href="#"><img src="img/logo.jpg" alt=""></a>
+            <a href="https://github.com/Edward7503"><img src="img/s_github.svg" alt=""></a>
         </div>
         <div class="swiper-wrapper">
             <div class="swiper-slide page1">
                 <div class="sec1">
-                    <div class="wrapper">
-                        <img src="img/logo.jpg" alt="">
+                    <div class="wrapper animated bounceInDown">
+                        <img src="img/s_github.svg" alt="">
                     </div>
                 </div>
-                <div class="sec2">生活是一种绵延不绝的渴望，渴望不断上升，变得更伟大而高贵。</div>
-                <div class="sec3">
+                <div class="sec2 animated fadeInLeft">生活是一种绵延不绝的渴望，渴望不断上升，变得更伟大而高贵。</div>
+                <div class="sec3 animated fadeInUp">
                     <p>我叫陆贵成</p>
                     <p>一名前端开发工程师</p>
                     <p>邮箱: wooorks@163.com</p>
@@ -344,28 +156,28 @@
             <div class="swiper-slide page2">
                 <div class="p2-sec1">
                     <h4>关于我</h4>
-                    <ul>
-                        <li>
+                    <ul class="row about">
+                        <li class="col-xs-6 col-sm-2 col-sm-offset-2">
                             <div class="pic">
-                                <img src="img/photo.jpg" alt="">
+                                <img src="img/i_age.svg" alt="">
                             </div>
                             <p>年龄/23</p>
                         </li>
-                        <li>
+                        <li class="col-xs-6 col-sm-2">
                             <div class="pic">
-                                <img src="img/photo.jpg" alt="">
+                                <img src="img/i_edu.svg" alt="">
                             </div>
                             <p>学历/本科</p>
                         </li>
-                        <li>
+                        <li class="col-xs-6 col-sm-2">
                             <div class="pic">
-                                <img src="img/photo.jpg" alt="">
+                                <img src="img/i_site.svg" alt="">
                             </div>
                             <p>坐标/深圳</p>
                         </li>
-                        <li>
+                        <li class="col-xs-6 col-sm-2">
                             <div class="pic">
-                                <img src="img/photo.jpg" alt="">
+                                <img src="img/i_status.svg" alt="">
                             </div>
                             <p>状态/离职</p>
                         </li>
@@ -373,7 +185,6 @@
                 </div>
                 <div class="p2-sec2">
                     <ul>
-                        <li>三年互联网经验,两年半全职前端开发经验</li>
                         <li>熟悉MV*开发,深谙自动化,模块化开发之道</li>
                         <li>高效的自学能力,具备独立分析解决问题能力</li>
                         <li>强烈的自我驱动力,代码强迫症患者</li>
@@ -382,22 +193,22 @@
             </div>
             <div class="swiper-slide page3">
                 <h4>技能栈</h4>
-                <div class="p3-skills">
-                    <div class="left">
+                <div class="p3-skills row">
+                    <div class="left col-xs-12 col-sm-6">
                         <ul class="skills">
                             <li class="skills-inner" id="skills_inner">
                                 <a>html</a>
                                 <a>css</a>
                                 <a>js</a>
-                                <a>jQ</a>
-                                <a>btp</a>
+                                <a>jQuery</a>
+                                <a>bootstrap</a>
                             </li>
                             <li class="skills-outer" id="skills_outer">
                                 <a>ng</a>
                                 <a>vue</a>
                                 <a>gulp</a>
                                 <a>git</a>
-                                <a>wpk</a>
+                                <a>webpake</a>
                                 <a>less</a>
                                 <a>suss</a>
                                 <a>ps</a>
@@ -405,7 +216,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="right">
+                    <div class="right col-xs-12 col-sm-6">
                         <p>熟练使用angularJs1.x及各种类库的指令封装</p>
                         <p>常驻PC/APP/微信三平台前端研发</p>
                         <p>擅长组件/插件开发，能脱离库书写JS代码</p>
@@ -415,31 +226,104 @@
             </div>
             <div class="swiper-slide page4">
                 <h4>经历</h4>
-                <div class="swiper-container2">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">1</div>
-                        <div class="swiper-slide">2</div>
+                <div class="expirence">
+                    <div id="exp-content">
+                        <div class="exp-one current">
+                            <div class="pic"></div>
+                            <div class="text">
+                                <h4>成都初唐网络科技股份有限公司</h4>
+                                <p>2015年3月-2015年6月</p>
+                                <strong>web前端实习生</strong>
+                                <ul>
+                                    <li>负责企业站静态页开发</li>
+                                    <li>根据产品需求，分析并提出最优的页面前端结构解决方案。持续的优化前端体验和页面响应速度，并保证兼容性和执行效率。</li>
+                                    <li>同期工作之余提升自己原生JS的编码能力</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="exp-two">
+                            <div class="pic"></div>
+                            <div class="text">
+                                <h4>成都初唐网络科技股份有限公司</h4>
+                                <p>2015年7月-2017年5月</p>
+                                <strong>web前端开发工程师</strong>
+                                <ul>
+                                    <li>负责快速构建高质量移动APP/PC/微信页面</li>
+                                    <li>根据业务需求设计合适的工程项目</li>
+                                    <li>高度组件化、模块化思维，拥有各平台调试能力</li>
+                                    <li>负责部门项目或者公司活动宣传页h5页面移动端开发</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-pagination"></div>
+                    <div id="tabs">
+                        <a class="current" href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                    </div>
                 </div>
             </div>
-            <div class="swiper-slide page5">Slide 5</div>
-            <div class="swiper-slide page6">Slide 6</div>
+            <div class="swiper-slide page5">
+                <h4>作品集</h4>
+                <div class="wrapper items" id="items">
+                    <div data-deg="0">
+                        <h5>i点餐（移动端app</h5>
+                        <p>I点餐是一款为指定餐厅用户定制的APP，提供选桌、点菜、下单、结账、预定餐桌服务。此项目为团体开发，本人主要根据设计图来还原页面布局，与后台同事协商接口制定，并完成此项目与后台的数据交互。</p>
+                        <a class="link" href="#"><img src="img/w_link.svg" alt=""></a>
+                    </div>
+                    <div data-deg="90">
+                        <h5>移动校园APP</h5>
+                        <p>一站式、全生命周期的校园官方移动服务平台，涵盖PC、安卓、IOS、微信平台，上线学校包括中央财经大学，北京交通大学，中国戏曲学院，辽宁大学，西南财经大学等等，下载量数十万，深受学生老师喜爱。</p>
+                        <a class="link" href="#"><img src="img/w_link.svg" alt=""></a>
+                    </div>
+                    <div data-deg="180">
+                        <h5>移动校园管理系统</h5>
+                        <p>针对校园APP的后台管理系统，包括人员架构，信息统计，权限设置，H5生产机，数据交换平台，各个模块的数据管理，反馈设置等等，为高校提供基于互联网运营的移动校园整体解决方案。</p>
+                        <a class="link" href="#"><img src="img/w_link.svg" alt=""></a>
+                    </div>
+                    <div data-deg="270">
+                        <h5>企业官网</h5>
+                        <p>一个pc端在线法律服务平台,为用户提供在线法律咨询、合同文书及法律文书等咨询。兼容IE8+,适配全移动机型，具有良好的兼容性，扩展性。根据客户群体的习性进行详细分析策划，制定出一套适合企业自身的网站建设的设计风格方案。</p>
+                        <a class="link" href="http://www.lawcheck.com.cn/"><img src="img/w_link.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="tabs hidden-sm" id="m_tabs">
+                    <a href="javascript:;">prev</a>
+                    <a href="javascript:;">next</a>
+                </div>
+                <p class="more-demo"><a href="https://github.com/Edward7503/DEMO/tree/master/DEMO" target="_blank">更多demo</a></p>
+            </div>
+            <div class="swiper-slide page6">
+                <h4>联系我</h4>
+                <div class="wrapper">
+                    <p><i>灵感</i><i>代码</i><i>梦想</i><i>未来</i></p>
+                    <p>注重效率，偏爱敏捷开发</p>
+                    <p>喜欢尝试，期待新鲜事物</p>
+                    <p>前端即兴趣，兴趣即未来</p>
+                    <p>行路有良友，便是捷径</p>
+                    <p>带上我吧，一起看到更大的世界</p>
+                    <p class="concat">
+                        <a href="https://github.com/Edward7503/DEMO"><img src="img/s_github.svg" alt=""></a>
+                        <a href="http://www.cnblogs.com/iceBlogs/"><img src="img/s_blog.svg" alt=""></a>
+                    </p>
+                    <div class="copyright">
+                        Copyright © 2015 - 2017
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination visible-sm"></div>
     </div>
 
-    <!-- Swiper JS -->
     <script src="scripts/swiper.jquery.js"></script>
-    <script src="scripts/swiper.animate1.0.2.min.js"></script>
     <script src="scripts/swiper.min.js"></script>
+    <script src="scripts/swiper.animate1.0.2.min.js"></script>
     <script src="scripts/index.js"></script>
 
     <script>
         (function () {
+
+            // skills section
             var skills_inner = document.querySelectorAll("#skills_inner > a");
             var skills_outer = document.querySelectorAll("#skills_outer > a");
 
@@ -448,13 +332,46 @@
             var a = 0;
             setInterval(function () {
                 a+=0.1;
-                skills_inner[i].style.transform = 'rotate('+ (i*70+a) +'deg) translateY(75px) rotate(-'+ (i*70+a) +'deg)';
-                skills_outer[j].style.transform = 'rotate(-'+ (j*40+a) +'deg) translateY(140px) rotate('+ (j*40+a) +'deg)';
+                skills_inner[i].style.transform = 'rotate('+ (i*70+a) +'deg) translateY(60px) rotate(-'+ (i*70+a) +'deg)';
+                skills_outer[j].style.transform = 'rotate(-'+ (j*40+a) +'deg) translateY(120px) rotate('+ (j*40+a) +'deg)';
                 j++;
                 j%=9;
                 i++;
                 i%=5;
             },13);
+
+            // experience
+            var tabs = document.querySelectorAll("#tabs > a");
+            var contents = document.querySelectorAll("#exp-content > div");
+            for(var i=0; i<tabs.length; i++){
+                tabs[i].addEventListener("click",function () {
+                    for(var j=0; j<tabs.length; j++){
+                        tabs[j].classList.remove('current');
+                        contents[j].classList.remove('current');
+                        if(this == tabs[j]){
+                            this.classList.add('current');
+                            contents[j].classList.add('current');
+                        }
+                    }
+                })
+            }
+
+            // items on mobile
+            var mTabs = document.querySelectorAll('#m_tabs > a');
+            var item = document.getElementById('items');
+
+            console.log(items);
+            var step = 0;
+            mTabs[0].onclick=function () {
+                step += 90;
+                item.style.transition = 'transform 2s';
+                item.style.transform = 'rotateX(5deg) translateX(-50%) translateY(-50%) rotateY('+ step +'deg)';
+            };
+            mTabs[1].onclick = function () {
+                step -= 90;
+                item.style.transition = 'transform 2s';
+                item.style.transform = 'rotateX(5deg) translateX(-50%) translateY(-50%) rotateY('+ step +'deg)';
+            };
 
         })()
     </script>
