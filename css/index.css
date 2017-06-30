@@ -150,7 +150,7 @@ ul{
     color: #ffffff;
 }
 .page3 h4{
-    padding-top: 4.5rem;
+    /*padding-top: 4.5rem;*/
     width: 100%;
     height: 5rem;
     line-height: 5rem;
@@ -158,7 +158,7 @@ ul{
     font-size: 2.4rem;
 }
 .page3 .p3-skills{
-    padding: 5rem;
+    padding: 0 1.5rem;
 }
 .page3 .p3-skills .left{
     height: 30rem;
@@ -404,7 +404,8 @@ ul{
     padding-top: 6rem;
 }
 .page5 .wrapper div{
-    width: 48%;
+    /*width: 48%;*/
+    height: 40rem;
     min-height: 18rem;
     background: #fff;
     border-radius: 1rem;
