@@ -342,9 +342,9 @@
             }
 
             // items on device width gt 768
-//             var page5Container = document.querySelector('#page5_container');
-//             var page5Wrapper = document.querySelector('#items');
-//             var page5Sliders = document.querySelectorAll('#items > div');
+            var page5Container = document.querySelector('#page5_container');
+            var page5Wrapper = document.querySelector('#items');
+            var page5Sliders = document.querySelectorAll('#items > div');
 //             var screenWidth = 0;
 //             window.onresize = function(){
 //                 screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
@@ -377,8 +377,18 @@
             document.writeln("您的浏览设备为：");
             if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
                 console.log("phone");
+                page5Container.classList.add("swiper-container");
+                page5Wrapper.classList.add("swiper-wrapper");
+                for(var i=0; i<page5Sliders.length; i++){
+                    page5Sliders[i].classList.add("swiper-slide");
+                }
             } else {
                 console.log("pc");
+                page5Container.classList.remove("swiper-container");
+                page5Wrapper.classList.remove("swiper-wrapper");
+                for(var i=0; i<page5Sliders.length; i++){
+                    page5Sliders[i].classList.remove("swiper-slide");
+                }
             }
         }
 
