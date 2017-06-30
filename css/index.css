@@ -404,13 +404,15 @@ ul{
     transform: translateX(-50%);
 }
 /* my produces on pc */
-/* .pc-width{
-    width
-} */
 .pc-margin{
     margin-left: -45%;
     margin-top: -25%;
-    padding: 10rem;
+    padding: 6rem;
+    padding-top: 0;
+    color: #49829d;
+}
+.pc-margin p{
+    color: #666;
 }
 .page5 .wrapper .pc-size{
     height: 20rem;
