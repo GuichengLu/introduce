@@ -11,7 +11,7 @@ var mySwiper = new Swiper('.swiper-wrapper > .swiper-container',{
     effect : 'cube',
     cube: {
         slideShadows: true,
-        shadow: true,
+        shadow: false,
         shadowOffset: 100,
         shadowScale: 0.6
     }
