@@ -344,12 +344,12 @@
                 screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
                 if(screenWidth < 768){
                     page5Container.classList.add("swiper-container");
-                    page5Container.classList.add("swiper-wrapper");
-                    page5Container.classList.add("swiper-slide");
+                    page5Wrapper.classList.add("swiper-wrapper");
+                    page5Slider.classList.add("swiper-slide");
                 }else{
                     page5Container.classList.remove("swiper-container");
-                    page5Container.classList.remove("swiper-wrapper");
-                    page5Container.classList.remove("swiper-slide");
+                    page5Wrapper.classList.remove("swiper-wrapper");
+                    page5Slider.classList.remove("swiper-slide");
                 }
                console.log(screenWidth);
             }
