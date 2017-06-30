@@ -403,6 +403,20 @@ ul{
     font-size:1.5rem;
     transform: translateX(-50%);
 }
+/* my produces on pc */
+/* .pc-width{
+    width
+} */
+.pc-margin{
+    margin-left: -45%;
+    margin-top: -25%;
+    padding: 10rem;
+}
+.pc-size{
+    height: 20rem;
+    width: 45%;
+}
+
 .page5 .wrapper,.page6 .wrapper{
     position: absolute;
     left: 50%;
