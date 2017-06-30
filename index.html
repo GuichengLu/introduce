@@ -304,10 +304,10 @@
                         <a class="link" href="https://edward7503.github.io/DEMO/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%BC%80%E5%8F%91%E5%B0%8Fdemo/index.html" target="_blank"><img src="img/w_link.svg" alt=""></a>
                     </div>
                 </div>
-                <div class="tabs hidden-sm" id="m_tabs">
+<!--                 <div class="tabs hidden-sm" id="m_tabs">
                     <a href="javascript:;">prev</a>
                     <a href="javascript:;">next</a>
-                </div>
+                </div> -->
                 <p class="more-demo"><a href="https://github.com/Edward7503/DEMO/tree/master/DEMO" target="_blank">更多demo</a></p>
             </div>
             <div class="swiper-slide page6">
@@ -375,21 +375,21 @@
             }
 
             // items on mobile
-            var mTabs = document.querySelectorAll('#m_tabs > a');
-            var item = document.getElementById('items');
+//             var mTabs = document.querySelectorAll('#m_tabs > a');
+//             var item = document.getElementById('items');
 
-            console.log(items);
-            var step = 0;
-            mTabs[0].onclick=function () {
-                step += 90;
-                item.style.transition = 'transform 2s';
-                item.style.transform = 'rotateX(5deg) translateX(-50%) translateY(-50%) rotateY('+ step +'deg)';
-            };
-            mTabs[1].onclick = function () {
-                step -= 90;
-                item.style.transition = 'transform 2s';
-                item.style.transform = 'rotateX(5deg) translateX(-50%) translateY(-50%) rotateY('+ step +'deg)';
-            };
+//             console.log(items);
+//             var step = 0;
+//             mTabs[0].onclick=function () {
+//                 step += 90;
+//                 item.style.transition = 'transform 2s';
+//                 item.style.transform = 'rotateX(5deg) translateX(-50%) translateY(-50%) rotateY('+ step +'deg)';
+//             };
+//             mTabs[1].onclick = function () {
+//                 step -= 90;
+//                 item.style.transition = 'transform 2s';
+//                 item.style.transform = 'rotateX(5deg) translateX(-50%) translateY(-50%) rotateY('+ step +'deg)';
+//             };
 
         })()
     </script>
