@@ -65,41 +65,41 @@
             }
 
             /*demo on mobile*/
-            .page5 div.items{
-                width: 24rem;
-                height: 36rem;
-                transform-style: preserve-3d;
-                transform: rotateX(5deg) translateX(-50%) translateY(-50%);
-            }
-            .page5 div.wrapper > div{
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                width: 100%;
-                height: 100%;
-                transform: translateX(-50%) translateY(-50%);
-                margin-left: -12rem;
-                margin-top: -18rem;
-                background: rgba(255, 255, 255, 0.97);
-                border-radius: 0;
-                font-size: 1.5rem;
-                border-right: 1px solid #f0f0f0;
-            }
-            .page5 div.wrapper > div:hover{
-                box-shadow: none;
-            }
-            .page5 div.wrapper > div:nth-child(1){
-                transform: rotateY(0deg) translateZ(12rem);
-            }
-            .page5 div.wrapper > div:nth-child(2){
-                transform: rotateY(90deg) translateZ(12rem);
-            }
-            .page5 div.wrapper > div:nth-child(3){
-                transform: rotateY(180deg) translateZ(12rem);
-            }
-            .page5 div.wrapper > div:nth-child(4){
-                transform: rotateY(270deg) translateZ(12rem);
-            }
+            /*.page5 div.items{*/
+                /*width: 24rem;*/
+                /*height: 36rem;*/
+                /*transform-style: preserve-3d;*/
+                /*transform: rotateX(5deg) translateX(-50%) translateY(-50%);*/
+            /*}*/
+            /*.page5 div.wrapper > div{*/
+                /*position: absolute;*/
+                /*left: 50%;*/
+                /*top: 50%;*/
+                /*width: 100%;*/
+                /*height: 100%;*/
+                /*transform: translateX(-50%) translateY(-50%);*/
+                /*margin-left: -12rem;*/
+                /*margin-top: -18rem;*/
+                /*background: rgba(255, 255, 255, 0.97);*/
+                /*border-radius: 0;*/
+                /*font-size: 1.5rem;*/
+                /*border-right: 1px solid #f0f0f0;*/
+            /*}*/
+            /*.page5 div.wrapper > div:hover{*/
+                /*box-shadow: none;*/
+            /*}*/
+            /*.page5 div.wrapper > div:nth-child(1){*/
+                /*transform: rotateY(0deg) translateZ(12rem);*/
+            /*}*/
+            /*.page5 div.wrapper > div:nth-child(2){*/
+                /*transform: rotateY(90deg) translateZ(12rem);*/
+            /*}*/
+            /*.page5 div.wrapper > div:nth-child(3){*/
+                /*transform: rotateY(180deg) translateZ(12rem);*/
+            /*}*/
+            /*.page5 div.wrapper > div:nth-child(4){*/
+                /*transform: rotateY(270deg) translateZ(12rem);*/
+            /*}*/
             .page5 .tabs a{
                 display: inline-block;
                 border-radius: 50%;
@@ -129,6 +129,18 @@
             }
             .more-demo a{
                 color: #fff;
+            }
+
+
+            .page5 div.wrapper{
+                position: absolute;
+                 left: 0%;
+                 top: 0%;
+                 width: 98%;
+                 padding-top: 6rem;
+            }
+            .page5 div.wrapper div{
+                margin-top: 0;
             }
 
         }
@@ -268,25 +280,25 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide page5">
+            <div class="swiper-slide page5 swiper-container">
                 <h4>作品集</h4>
-                <div class="wrapper items" id="items">
-                    <div data-deg="0">
+                <div class="wrapper items swiper-wrapper" id="items">
+                    <div class="swiper-slide" data-deg="0">
                         <h5>github demo</h5>
                         <p>个人学习小demo</p>
                         <a class="link" href="https://github.com/Edward7503/DEMO/tree/master/DEMO" target="_blank"><img src="img/w_link.svg" alt=""></a>
                     </div>
-                    <div data-deg="90">
+                    <div class="swiper-slide" data-deg="90">
                         <h5>简易后台系统</h5>
                         <p>该 demo 是一个简易的后台管理系统,为用户打造一个专属于个人的个性相册管理系统, 由于时间原因功能暂时还没有添加,后期后对该项目添加更多的功能,打造一个更加完备的相册管理系统。</p>
                         <a class="link" href="https://edward7503.github.io/DEMO//BMS/simple-BMS.html" target="_blank"><img src="img/w_link.svg" alt=""></a>
                     </div>
-                    <div data-deg="180">
+                    <div class="swiper-slide" data-deg="180">
                         <h5>飞机大战</h5>
                         <p>简易飞机大战, 玩家可选自己喜欢的武器进行游戏,同时界面后实时显示玩家的得分情况,当玩家的战机被地方的子弹炸到或敌方战机撞到则游戏结束。该游戏主要采用了 HTML, CSS, jquery及 jqueryUI 的技术实现功能,后期会不断的完善和添加各类功能。</p>
                         <a class="link" href="https://edward7503.github.io/DEMO/PlaneWars/newair.htm" target="_blank"><img src="img/w_link.svg" alt=""></a>
                     </div>
-                    <div data-deg="270">
+                    <div class="swiper-slide" data-deg="270">
                         <h5>响应式开发小demo</h5>
                         <p>这是一个简单的响应式开发的小 Demo, 您可以尝试着在不同屏幕大小的设备上浏览或缩小浏览器的宽度来浏览响应式开发的效果。</p>
                         <a class="link" href="https://edward7503.github.io/DEMO/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%BC%80%E5%8F%91%E5%B0%8Fdemo/index.html" target="_blank"><img src="img/w_link.svg" alt=""></a>

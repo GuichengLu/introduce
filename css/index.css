@@ -404,7 +404,8 @@ ul{
     padding-top: 6rem;
 }
 .page5 .wrapper div{
-    width: 48%;
+    /*width: 48%;*/
+    height: 40rem;
     min-height: 18rem;
     background: #fff;
     border-radius: 1rem;
