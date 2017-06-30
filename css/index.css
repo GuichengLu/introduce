@@ -393,7 +393,7 @@ ul{
 }
 .page5 h5{
     font-size: 1.8rem;
-    color: #4d87a2;
+    color: #fff;
 }
 .page5 .wrapper,.page6 .wrapper{
     position: absolute;
@@ -413,6 +413,7 @@ ul{
     padding: 2rem;
     font-size: 1.6rem;
     transition: box-shadow 1s;
+    color: #eee;
 }
 .page5 .wrapper div:hover{
     box-shadow: 0.5rem 0.5rem 1rem #333;
@@ -439,7 +440,7 @@ ul{
 .page5 .link img{
     width: 10%;
     height: 10%;
-    opacity: 0.5;
+    opacity: 1;
 }
 .page6 h4{
     width: 100%;
