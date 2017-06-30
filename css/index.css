@@ -395,6 +395,14 @@ ul{
     font-size: 1.8rem;
     color: #fff;
 }
+.warn-tip{
+    position:absolute;
+    left: 50%;
+    bottom: 6rem;
+    color:#e0e0e0;
+    font-size:1.5rem;
+    transform: translateX(-50%);
+}
 .page5 .wrapper,.page6 .wrapper{
     position: absolute;
     left: 50%;
