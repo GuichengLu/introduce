@@ -411,6 +411,9 @@ ul{
 /*     width: 98%; */
     padding-top: 6rem;
 }
+.page6 .wrapper{
+    width: 98%;
+}
 .page5 .wrapper div{
     /*width: 48%;*/
     height: 40rem;
